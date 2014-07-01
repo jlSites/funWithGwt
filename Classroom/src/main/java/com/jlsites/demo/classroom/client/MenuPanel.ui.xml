@@ -1,0 +1,76 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+  xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+  <ui:style>
+  .menus {
+    padding: 0.5em;
+    line-height: 150%;
+    height: 100%;
+  }
+  
+  .item {
+    display: block;
+    padding: .2em;
+  }
+  
+  .subtitleDiv {
+    background: olive;
+    padding: .2em;
+    font-weight: bold;
+    color: #F5DEB3;
+  }
+  
+  .teacherNameDiv {
+    font-weight: bold;
+  }
+  
+  .teacherOuterDiv {
+    text-align: center;
+  }
+  </ui:style>
+
+  <g:HTMLPanel styleName='{style.menus}'>
+    <div class="{style.subtitleDiv}">
+      Our Classroom
+    </div>
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
+      ui:field="homeAnchor">Home</g:Anchor>
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
+      ui:field="homeworkAnchor">Homework
+      Assignments</g:Anchor>
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
+      ui:field="assessmentsAnchor">Assessments</g:Anchor>
+
+    <div class="{style.subtitleDiv}">
+      Meet Your Teacher
+    </div>
+    <div class='{style.teacherOuterDiv}'>
+      <p>
+        <img src='images/teacher.png'></img>
+      </p>
+      <g:Anchor href='javascript:;' ui:field="clickTeacherAnchor">Click here</g:Anchor>
+      to read about
+      <div class="{style.teacherNameDiv}">
+        Mr. JLSites
+      </div>
+    </div>
+
+    <div class="{style.subtitleDiv}">
+      More Stuff
+    </div>
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
+      ui:field="announcementsAnchor">Class
+      Announcements</g:Anchor>
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
+      ui:field="calendarAnchor">Class Calendar</g:Anchor>
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
+      ui:field="readingListAnchor">Reading List</g:Anchor>
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
+      ui:field="usefulLinksAnchor">Useful links</g:Anchor>
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
+      ui:field="photosAnchor">Class Photos</g:Anchor>
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
+      ui:field="formsAndDocsAnchor">Forms and Docs</g:Anchor>
+  </g:HTMLPanel>
+</ui:UiBinder> 

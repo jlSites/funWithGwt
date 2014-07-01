@@ -1,0 +1,126 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+  xmlns:g="urn:import:com.google.gwt.user.client.ui">
+  <ui:style>
+  .important {
+    font-weight: bold;
+  }
+  
+  .subtitleDiv {
+    background: teal;
+    font-weight: bold;
+    color: #F5DEB3;
+    line-height: 150%;
+    padding: .2em;
+  }
+  
+  .subjectOuterDiv {
+    padding: .5em;
+  }
+  
+  .floatLeftDiv {
+    float: left;
+    width: 50%;
+  }
+  
+  .floatRightDiv {
+    float: right;
+    width: 50%;
+  }
+  </ui:style>
+
+  <g:HTMLPanel>
+
+    <div class="{style.subjectOuterDiv}">
+      <div class="{style.subtitleDiv}">
+        Student of the Month
+      </div>
+      <div>
+        John Doe Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. In
+        tincidunt nisl felis. Praesent laoreet mollis justo id
+        ornare.
+        Curabitur congue, odio vel faucibus interdum, felis magna
+        euismod
+        ante, id dignissim lectus libero id nisl. Nunc justo
+        arcu,
+        eleifend in congue id, tempus et lorem. In ultricies
+        tincidunt
+        posuere. Duis ut commodo urna. Vestibulum tellus felis,
+        faucibus
+        eget blandit eu, egestas eu mi. Proin posuere adipiscing
+        mollis.
+        Nam sit amet neque erat. Nulla ac fringilla est.
+        <p>Posted
+          Oct 21,
+          2009, 8:58 AM by Sample User</p>
+      </div>
+    </div>
+
+    <div class="{style.subjectOuterDiv}">
+      <div class="{style.subtitleDiv}">
+        Word of the Week
+      </div>
+      <div>
+        schadenfreude \SHAH-dn-froi-duh\ (noun) schadenfreude
+        \SHAH-dn-froi-duh\ (noun)1.
+        Enjoyment obtained from the troubles
+        of
+        othersExample
+        Sentence:Despite herself, Jane felt a tingle of
+        schadenfreude at
+        her sister-in-law’s ...
+        <p>Posted Oct 23, 2009,
+          12:21
+          AM by Sample User</p>
+      </div>
+    </div>
+
+    <div class="{style.floatLeftDiv}">
+      <div class="{style.subjectOuterDiv}">
+        <div class="{style.subtitleDiv}">
+          Recent Annoucements
+        </div>
+        <div>
+          Reminder That it's a Short Week This Week Lorem ipsum dolor
+          sit
+          amet,
+          consectetur adipiscing elit. In tincidunt nisl
+          felis.
+          Praesent
+          laoreet mollis justo id ornare. Curabitur
+          congue, odio
+          vel
+          faucibus
+          interdum, felis magna euismod ante,
+          id dignissim ...
+          <p>Posted Oct 21, 2009, 9:04 AM by Mandy Sladden</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="{style.floatRightDiv}">
+      <div class="{style.subjectOuterDiv}">
+        <div class="{style.subtitleDiv}">
+          Homework Assignments
+        </div>
+        <div>
+          Homework For Week Of October 25th Lorem ipsum dolor sit
+          amet,
+          consectetur
+          adipiscing elit. In tincidunt nisl felis.
+          Praesent
+          laoreet mollis
+          justo id ornare. Curabitur congue,
+          odio vel
+          faucibus
+          interdum,
+          felis magna euismod ante, id
+          dignissim ...
+          <p>Posted Oct 21,
+            2009, 9:03 AM by Mandy Sladden</p>
+        </div>
+      </div>
+    </div>
+  </g:HTMLPanel>
+</ui:UiBinder> 

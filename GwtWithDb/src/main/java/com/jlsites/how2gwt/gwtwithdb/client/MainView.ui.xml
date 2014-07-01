@@ -1,0 +1,60 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+  <ui:style>
+  .important {
+    font-weight: bold;
+  }
+  </ui:style>
+
+  <g:HTMLPanel>
+    <h2>Some features added into this project:</h2>
+    <div>
+      <li>
+        <h3>gwt+maven</h3>
+      </li>
+      used maven to manage the dependent jars and build
+      the war into
+      /target; this project can be also
+      run in DEV Mode for debuging in
+      Eclipse
+
+      <li>
+        <h3>uibinder</h3>
+      </li>
+      declarative ui in xml
+
+      <li>
+        <h3>gin+guice</h3>
+      </li>
+      lightweight di used mainly on the client
+
+      <li>
+        <h3>spring-orm+hibernate</h3>
+      </li>
+      to load the beans from action handlers and gwt-dispatch while
+      initializing the web
+      application
+
+      <li>
+        <h3>gwt-dispatch</h3>
+      </li>
+      a single dispatch remote service servlet
+
+
+    </div>
+
+    <h2>Testing gwt-dispatch</h2>
+    <g:Button ui:field="btnDispatchMe">Dispatch Me</g:Button>
+
+    <h2>Testing Spring ORM + JPA + Hibernate + HSQL</h2>
+    All Users:
+    <g:Label ui:field="labAllUsers"></g:Label>
+    <g:TextBox ui:field="textUser"></g:TextBox>
+    <g:Button ui:field="btnAddUser">Create User</g:Button>
+
+    <h2>TODO - MVP (Model + Dumb View + Activity->Presenter + Place History)</h2>
+
+    <h2>TODO - i18n</h2>
+    
+  </g:HTMLPanel>
+</ui:UiBinder> 

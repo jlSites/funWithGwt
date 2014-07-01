@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+  xmlns:g="urn:import:com.google.gwt.user.client.ui">
+  <ui:style>
+  .linksDiv {
+    text-align: center;
+    padding: 1em;
+  }
+  
+  .outer {
+    height: 50px;
+    color: #fff;
+    background: #265d05 url(images/bg-footer-green.gif) repeat-x;
+  }
+  
+  .item {
+    color: #fff;
+    margin: 0.5em;
+  }
+  
+  .poweredSpan {
+    color: purple;
+  }
+  </ui:style>
+
+  <g:HTMLPanel addStyleNames='{style.outer}'>
+    <div class="{style.linksDiv}">
+      <g:Anchor addStyleNames='{style.item}' href='javascript:;'>Sign in
+      </g:Anchor>
+      <g:Anchor addStyleNames='{style.item}' href='javascript:;'>Help
+      </g:Anchor>
+      <g:Anchor addStyleNames='{style.item}' href='javascript:;'>Contact
+      </g:Anchor>
+      <g:Anchor addStyleNames='{style.item}' href='javascript:;'>Privacy &amp;
+        Terms
+      </g:Anchor>
+      <span class="{style.poweredSpan}">Powered By</span>
+      <g:Anchor addStyleNames='{style.item}' href='javascript:;'
+        title="JLSites">JLSites
+      </g:Anchor>
+    </div>
+  </g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,49 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+  xmlns:g="urn:import:com.google.gwt.user.client.ui">
+  <ui:style>
+  .important {
+    font-weight: bold;
+  }
+  
+  .subtitleDiv {
+    background: teal;
+    font-weight: bold;
+    color: #F5DEB3;
+    line-height: 150%;
+    padding: .2em;
+  }
+  
+  .subjectOuterDiv {
+    padding: .5em;
+  }
+  </ui:style>
+  <g:HTMLPanel>
+
+    <div class="{style.subjectOuterDiv}">
+      <div class="{style.subtitleDiv}">
+        Homework Assignments
+      </div>
+      <div>
+        John Doe Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. In
+        tincidunt nisl felis. Praesent laoreet mollis justo id
+        ornare.
+        Curabitur congue, odio vel faucibus interdum, felis magna
+        euismod
+        ante, id dignissim lectus libero id nisl. Nunc justo
+        arcu,
+        eleifend in congue id, tempus et lorem. In ultricies
+        tincidunt
+        posuere. Duis ut commodo urna. Vestibulum tellus felis,
+        faucibus
+        eget blandit eu, egestas eu mi. Proin posuere adipiscing
+        mollis.
+        Nam sit amet neque erat. Nulla ac fringilla est.
+        <p>Posted
+          Oct 21,
+          2009, 8:58 AM by Sample User</p>
+      </div>
+    </div>
+  </g:HTMLPanel>
+</ui:UiBinder> 
