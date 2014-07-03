@@ -1,4 +1,4 @@
-package com.jlsites.demo.classroom.client;
+package com.jlsites.demo.classroom.client.ui;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -9,6 +9,7 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
+import com.jlsites.demo.classroom.client.common.AboutDialog;
 
 /**
  * The top panel, which contains the 'welcome' message and various links.

@@ -1,4 +1,4 @@
-package com.jlsites.demo.classroom.client.activity;
+package com.jlsites.demo.classroom.client.mvp;
 
 import com.google.gwt.place.shared.PlaceHistoryMapper;
 import com.google.gwt.place.shared.WithTokenizers;
@@ -15,5 +15,5 @@ import com.jlsites.demo.classroom.client.place.MoreAboutTeacherPlace;
 @WithTokenizers({
     HomePlace.Tokenizer.class, HomeworkPlace.Tokenizer.class, AssessmentsPlace.Tokenizer.class,
     MoreAboutTeacherPlace.Tokenizer.class})
-public interface AppPlaceHistoryMapper extends PlaceHistoryMapper {
+public interface ApplicationPlaceHistoryMapper extends PlaceHistoryMapper {
 }

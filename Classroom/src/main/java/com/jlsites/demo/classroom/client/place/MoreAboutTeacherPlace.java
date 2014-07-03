@@ -4,9 +4,14 @@ import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;
 
 public class MoreAboutTeacherPlace extends Place {
+  private static final String TOKEN = "MOREABOUTTEACHER";
   private String token;
 
-  public MoreAboutTeacherPlace(String strToken) {
+  public MoreAboutTeacherPlace() {
+    this(TOKEN);
+  }
+
+  private MoreAboutTeacherPlace(String strToken) {
     token = strToken;
   }
 

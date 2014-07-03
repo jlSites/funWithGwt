@@ -4,9 +4,14 @@ import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;
 
 public class AssessmentsPlace extends Place {
+  private static final String TOKEN = "ASSESSMENTS";
   private String token;
 
-  public AssessmentsPlace(String strToken) {
+  public AssessmentsPlace() {
+    this(TOKEN);
+  }
+
+  private AssessmentsPlace(String strToken) {
     token = strToken;
   }
 

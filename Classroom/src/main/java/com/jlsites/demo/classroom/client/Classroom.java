@@ -5,18 +5,12 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
 import com.google.gwt.resources.client.CssResource.NotStrict;
-import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.client.ui.LayoutPanel;
-import com.google.gwt.user.client.ui.RootLayoutPanel;
+import com.google.gwt.user.client.ui.RootPanel;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
  */
 public class Classroom implements EntryPoint {
-
-  interface Binder extends UiBinder<LayoutPanel, Classroom> {
-  }
 
   interface GlobalResources extends ClientBundle {
     @NotStrict
@@ -24,22 +18,15 @@ public class Classroom implements EntryPoint {
     CssResource css();
   }
 
-  private static final Binder binder = GWT.create(Binder.class);
-
-  @UiField
-  TopPanel topPanel;
-  @UiField
-  ContentPanel contentPanel;
-  @UiField
-  FooterPanel footerPanel;
+  private final ApplicationGinjector ginjector = GWT.create(ApplicationGinjector.class);
 
   public void onModuleLoad() {
     // Inject global styles.
     GWT.<GlobalResources> create(GlobalResources.class).css().ensureInjected();
 
-    LayoutPanel outer = binder.createAndBindUi(this);
+    RootPanel.get().add(ginjector.getAppWidget());
 
-    RootLayoutPanel root = RootLayoutPanel.get();
-    root.add(outer);
+    // Goes to place represented on URL or default place
+    ginjector.getPlaceHistoryHandler().handleCurrentHistory();
   }
 }

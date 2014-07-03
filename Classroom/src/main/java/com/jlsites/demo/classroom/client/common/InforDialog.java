@@ -1,4 +1,4 @@
-package com.jlsites.demo.classroom.client;
+package com.jlsites.demo.classroom.client.common;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.DivElement;

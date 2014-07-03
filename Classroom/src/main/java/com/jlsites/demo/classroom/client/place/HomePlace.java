@@ -4,9 +4,14 @@ import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;
 
 public class HomePlace extends Place {
+  private static final String TOKEN = "HOME";
   private String token;
 
-  public HomePlace(String strToken) {
+  public HomePlace() {
+    this(TOKEN);
+  }
+
+  private HomePlace(String strToken) {
     token = strToken;
   }
 
