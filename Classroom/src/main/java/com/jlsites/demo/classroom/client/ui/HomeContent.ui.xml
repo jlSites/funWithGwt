@@ -1,6 +1,5 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
-<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-  xmlns:g="urn:import:com.google.gwt.user.client.ui">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
   <ui:style>
   .important {
     font-weight: bold;
@@ -16,6 +15,7 @@
   
   .subjectOuterDiv {
     padding: .5em;
+    clear: both;
   }
   
   .floatLeftDiv {
@@ -27,6 +27,26 @@
     float: right;
     width: 50%;
   }
+  
+  .starImage {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .subContentDiv {
+    margin: 10px;
+  }
+  
+  .seperatorDiv {
+    height: 1px;
+    border-bottom: 1px dashed gray;
+    clear: both;
+  }
+  
+  .resultsDiv {
+    margin-top: 10px;
+  }
   </ui:style>
 
   <g:HTMLPanel>
@@ -35,25 +55,68 @@
       <div class="{style.subtitleDiv}">
         Student of the Month
       </div>
-      <div>
+      <div class="{style.subContentDiv}">
+        <img class="{style.starImage}" src='images/star-june-2014.png'></img>
         John Doe Lorem ipsum dolor sit amet, consectetur adipiscing
         elit. In
-        tincidunt nisl felis. Praesent laoreet mollis justo id
+        tincidunt nisl felis.
+        Praesent laoreet mollis justo id
         ornare.
-        Curabitur congue, odio vel faucibus interdum, felis magna
+        Curabitur congue, odio vel faucibus interdum, felis
+        magna
         euismod
         ante, id dignissim lectus libero id nisl. Nunc justo
         arcu,
-        eleifend in congue id, tempus et lorem. In ultricies
+        eleifend in congue id,
+        tempus et lorem. In ultricies
         tincidunt
-        posuere. Duis ut commodo urna. Vestibulum tellus felis,
+        posuere. Duis ut commodo urna. Vestibulum tellus
+        felis,
         faucibus
         eget blandit eu, egestas eu mi. Proin posuere adipiscing
         mollis.
-        Nam sit amet neque erat. Nulla ac fringilla est.
+        Nam sit amet
+        neque erat. Nulla ac fringilla est.
         <p>Posted
           Oct 21,
           2009, 8:58 AM by Sample User</p>
+        <div class="{style.seperatorDiv}" />
+      </div>
+
+      <div class="{style.subContentDiv}">
+        <img class="{style.starImage}" src='images/star-june-2014.png'></img>
+        John Doe Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. In
+        tincidunt nisl felis.
+        Praesent laoreet mollis justo id
+        ornare.
+        Curabitur congue, odio vel faucibus interdum, felis
+        magna
+        euismod
+        ante, id dignissim lectus libero id nisl. Nunc justo
+        arcu,
+        eleifend in congue id,
+        tempus et lorem. In ultricies
+        tincidunt
+        posuere. Duis ut commodo urna. Vestibulum tellus
+        felis,
+        faucibus
+        eget blandit eu, egestas eu mi. Proin posuere adipiscing
+        mollis.
+        Nam sit amet
+        neque erat. Nulla ac fringilla est.
+        <p>Posted
+          Oct 21,
+          2009, 8:58 AM by Sample User</p>
+        <div class="{style.seperatorDiv}" />
+      </div>
+
+      <div class="{style.resultsDiv}">
+        Showing posts
+        <strong>2</strong>
+        of
+        <strong>15</strong>
+        <g:Anchor href='javascript:;'>View More >></g:Anchor>
       </div>
     </div>
 
@@ -61,10 +124,11 @@
       <div class="{style.subtitleDiv}">
         Word of the Week
       </div>
-      <div>
+      <div class="{style.subContentDiv}">
         schadenfreude \SHAH-dn-froi-duh\ (noun) schadenfreude
         \SHAH-dn-froi-duh\ (noun)1.
-        Enjoyment obtained from the troubles
+        Enjoyment
+        obtained from the troubles
         of
         othersExample
         Sentence:Despite herself, Jane felt a tingle of
@@ -73,6 +137,31 @@
         <p>Posted Oct 23, 2009,
           12:21
           AM by Sample User</p>
+        <div class="{style.seperatorDiv}" />
+      </div>
+
+      <div class="{style.subContentDiv}">
+        schadenfreude \SHAH-dn-froi-duh\ (noun) schadenfreude
+        \SHAH-dn-froi-duh\ (noun)1.
+        Enjoyment
+        obtained from the troubles
+        of
+        othersExample
+        Sentence:Despite herself, Jane felt a tingle of
+        schadenfreude at
+        her sister-in-law’s ...
+        <p>Posted Oct 23, 2009,
+          12:21
+          AM by Sample User</p>
+        <div class="{style.seperatorDiv}" />
+      </div>
+
+      <div class="{style.resultsDiv}">
+        Showing posts
+        <strong>2</strong>
+        of
+        <strong>15</strong>
+        <g:Anchor href='javascript:;'>View More >></g:Anchor>
       </div>
     </div>
 
@@ -81,11 +170,12 @@
         <div class="{style.subtitleDiv}">
           Recent Annoucements
         </div>
-        <div>
+        <div class="{style.subContentDiv}">
           Reminder That it's a Short Week This Week Lorem ipsum dolor
           sit
           amet,
-          consectetur adipiscing elit. In tincidunt nisl
+          consectetur adipiscing
+          elit. In tincidunt nisl
           felis.
           Praesent
           laoreet mollis justo id ornare. Curabitur
@@ -95,6 +185,51 @@
           interdum, felis magna euismod ante,
           id dignissim ...
           <p>Posted Oct 21, 2009, 9:04 AM by Mandy Sladden</p>
+          <div class="{style.seperatorDiv}" />
+        </div>
+
+        <div class="{style.subContentDiv}">
+          Reminder That it's a Short Week This Week Lorem ipsum dolor
+          sit
+          amet,
+          consectetur adipiscing
+          elit. In tincidunt nisl
+          felis.
+          Praesent
+          laoreet mollis justo id ornare. Curabitur
+          congue, odio
+          vel
+          faucibus
+          interdum, felis magna euismod ante,
+          id dignissim ...
+          <p>Posted Oct 21, 2009, 9:04 AM by Mandy Sladden</p>
+          <div class="{style.seperatorDiv}" />
+        </div>
+
+        <div class="{style.subContentDiv}">
+          Reminder That it's a Short Week This Week Lorem ipsum dolor
+          sit
+          amet,
+          consectetur adipiscing
+          elit. In tincidunt nisl
+          felis.
+          Praesent
+          laoreet mollis justo id ornare. Curabitur
+          congue, odio
+          vel
+          faucibus
+          interdum, felis magna euismod ante,
+          id dignissim ...
+          <p>Posted Oct 21, 2009, 9:04 AM by Mandy Sladden</p>
+          <div class="{style.seperatorDiv}" />
+        </div>
+
+        <div class="{style.resultsDiv}">
+          Showing posts
+          <strong>2</strong>
+          of
+          <strong>15</strong>
+          <g:Anchor href='javascript:;'>View More >></g:Anchor>
         </div>
       </div>
     </div>
@@ -104,11 +239,12 @@
         <div class="{style.subtitleDiv}">
           Homework Assignments
         </div>
-        <div>
+        <div class="{style.subContentDiv}">
           Homework For Week Of October 25th Lorem ipsum dolor sit
           amet,
           consectetur
-          adipiscing elit. In tincidunt nisl felis.
+          adipiscing elit. In
+          tincidunt nisl felis.
           Praesent
           laoreet mollis
           justo id ornare. Curabitur congue,
@@ -119,6 +255,34 @@
           dignissim ...
           <p>Posted Oct 21,
             2009, 9:03 AM by Mandy Sladden</p>
+          <div class="{style.seperatorDiv}" />
+        </div>
+
+        <div class="{style.subContentDiv}">
+          Homework For Week Of October 25th Lorem ipsum dolor sit
+          amet,
+          consectetur
+          adipiscing elit. In
+          tincidunt nisl felis.
+          Praesent
+          laoreet mollis
+          justo id ornare. Curabitur congue,
+          odio vel
+          faucibus
+          interdum,
+          felis magna euismod ante, id
+          dignissim ...
+          <p>Posted Oct 21,
+            2009, 9:03 AM by Mandy Sladden</p>
+          <div class="{style.seperatorDiv}" />
+        </div>
+
+        <div class="{style.resultsDiv}">
+          Showing posts
+          <strong>2</strong>
+          of
+          <strong>15</strong>
+          <g:Anchor href='javascript:;'>View More >></g:Anchor>
         </div>
       </div>
     </div>

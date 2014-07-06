@@ -35,6 +35,8 @@ public class MenuPanel extends Composite implements HasMenus {
   Anchor photosAnchor;
   @UiField
   Anchor formsAndDocsAnchor;
+  @UiField
+  Anchor currentPollAnchor;
 
   public MenuPanel() {
     initWidget(uiBinder.createAndBindUi(this));

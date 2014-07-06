@@ -1,6 +1,5 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
-<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-  xmlns:g="urn:import:com.google.gwt.user.client.ui">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
 
   <ui:style>
   .menus {
@@ -25,7 +24,7 @@
     font-weight: bold;
   }
   
-  .teacherOuterDiv {
+  .teacherOuterDiv,.pollOuterDiv {
     text-align: center;
   }
   </ui:style>
@@ -34,13 +33,10 @@
     <div class="{style.subtitleDiv}">
       Our Classroom
     </div>
-    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
-      ui:field="homeAnchor">Home</g:Anchor>
-    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
-      ui:field="homeworkAnchor">Homework
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;' ui:field="homeAnchor">Home</g:Anchor>
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;' ui:field="homeworkAnchor">Homework
       Assignments</g:Anchor>
-    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
-      ui:field="assessmentsAnchor">Assessments</g:Anchor>
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;' ui:field="assessmentsAnchor">Assessments</g:Anchor>
 
     <div class="{style.subtitleDiv}">
       Meet Your Teacher
@@ -59,18 +55,21 @@
     <div class="{style.subtitleDiv}">
       More Stuff
     </div>
-    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
-      ui:field="announcementsAnchor">Class
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;' ui:field="announcementsAnchor">Class
       Announcements</g:Anchor>
-    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
-      ui:field="calendarAnchor">Class Calendar</g:Anchor>
-    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
-      ui:field="readingListAnchor">Reading List</g:Anchor>
-    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
-      ui:field="usefulLinksAnchor">Useful links</g:Anchor>
-    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
-      ui:field="photosAnchor">Class Photos</g:Anchor>
-    <g:Anchor addStyleNames='{style.item}' href='javascript:;'
-      ui:field="formsAndDocsAnchor">Forms and Docs</g:Anchor>
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;' ui:field="calendarAnchor">Class Calendar</g:Anchor>
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;' ui:field="readingListAnchor">Reading List</g:Anchor>
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;' ui:field="usefulLinksAnchor">Useful links</g:Anchor>
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;' ui:field="photosAnchor">Class Photos</g:Anchor>
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;' ui:field="formsAndDocsAnchor">Forms and Docs</g:Anchor>
+
+    <div class="{style.subtitleDiv}">
+      Current Poll
+    </div>
+    <div class='{style.pollOuterDiv}'>
+      <g:Anchor addStyleNames='{style.item}' href='javascript:;' ui:field="currentPollAnchor">
+        <img src='images/current-poll.png'></img>
+      </g:Anchor>
+    </div>
   </g:HTMLPanel>
 </ui:UiBinder> 
