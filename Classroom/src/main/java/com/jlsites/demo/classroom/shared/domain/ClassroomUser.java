@@ -5,6 +5,8 @@ import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,10 +15,9 @@ import javax.persistence.Lob;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "HAPPY_USER")
-public class HappyUser implements Serializable {
-
-  private static final long serialVersionUID = -6194506054212510220L;
+@Table(name = "CLASSROOM_USER")
+public class ClassroomUser implements Serializable {
+  private static final long serialVersionUID = 105591614076568595L;
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,12 +27,22 @@ public class HappyUser implements Serializable {
   @Column(name = "USER_NAME", nullable = false, length = 30, unique = true)
   private String userName;
 
+  @Column(name = "FAMILY_NAME", nullable = true, length = 30)
+  private String familyName;
+
+  @Column(name = "GIVEN_NAMES", nullable = true, length = 30)
+  private String givenNames;
+
+  @Column(name = "ROLE", nullable = false)
+  @Enumerated(EnumType.STRING)
+  private ClassroomRole role;
+
   @Lob
   @Basic(fetch = FetchType.LAZY)
-  @Column(name = "USER_PIC", columnDefinition = "BLOB NOT NULL")
+  @Column(name = "PIC", columnDefinition = "BLOB NULL")
   protected byte[] pic;
 
-  public HappyUser() {
+  public ClassroomUser() {
   }
 
   public long getUserId() {

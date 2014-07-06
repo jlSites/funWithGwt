@@ -7,16 +7,16 @@ import net.customware.gwt.dispatch.shared.DispatchException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.jlsites.demo.classroom.server.services.HappyUserService;
+import com.jlsites.demo.classroom.server.services.ClassroomUserService;
 import com.jlsites.demo.classroom.shared.action.GetAllUsersAction;
 import com.jlsites.demo.classroom.shared.action.GetAllUsersResult;
 
 public class GetAllUsersActionHandler extends
     SimpleActionHandler<GetAllUsersAction, GetAllUsersResult> {
   private static final Logger LOGGER = LoggerFactory.getLogger(GetAllUsersActionHandler.class);
-  private HappyUserService userService;
+  private ClassroomUserService userService;
 
-  public GetAllUsersActionHandler(HappyUserService userService) {
+  public GetAllUsersActionHandler(ClassroomUserService userService) {
     this.userService = userService;
   }
 

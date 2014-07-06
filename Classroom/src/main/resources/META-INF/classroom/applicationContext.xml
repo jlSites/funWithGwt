@@ -17,21 +17,17 @@
     <property name="actionHandlers">
       <list>
         <ref bean="addUserActionHandler" />
-        <ref bean="canDispatchActionHandler" />
         <ref bean="getAllUsersActionHandler" />
       </list>
     </property>
   </bean>
 
   <bean id="addUserActionHandler" class="com.jlsites.demo.classroom.server.handler.AddUserActionHandler">
-    <constructor-arg ref="HappyUserServiceImpl" />
+    <constructor-arg ref="ClassroomUserServiceImpl" />
   </bean>
 
   <bean id="getAllUsersActionHandler" class="com.jlsites.demo.classroom.server.handler.GetAllUsersActionHandler">
-    <constructor-arg ref="HappyUserServiceImpl" />
-  </bean>
-
-  <bean id="canDispatchActionHandler" class="com.jlsites.demo.classroom.server.handler.CanDispatchActionHandler">
+    <constructor-arg ref="ClassroomUserServiceImpl" />
   </bean>
 
   <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />

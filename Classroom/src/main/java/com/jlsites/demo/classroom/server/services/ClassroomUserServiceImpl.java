@@ -9,23 +9,23 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jlsites.demo.classroom.server.dao.HappyUserDao;
-import com.jlsites.demo.classroom.shared.domain.HappyUser;
+import com.jlsites.demo.classroom.server.dao.ClassroomUserDao;
+import com.jlsites.demo.classroom.shared.domain.ClassroomUser;
 
-@Service(value = "HappyUserServiceImpl")
+@Service(value = "ClassroomUserServiceImpl")
 @Transactional
-public class HappyUserServiceImpl implements HappyUserService {
-  private static final Logger LOG = LoggerFactory.getLogger(HappyUserServiceImpl.class);
+public class ClassroomUserServiceImpl implements ClassroomUserService {
+  private static final Logger LOG = LoggerFactory.getLogger(ClassroomUserServiceImpl.class);
 
-  private HappyUserDao userDao;
+  private ClassroomUserDao userDao;
 
   @Autowired
-  public HappyUserServiceImpl(HappyUserDao userDao) {
+  public ClassroomUserServiceImpl(ClassroomUserDao userDao) {
     this.userDao = userDao;
   }
 
   @Override
-  public HappyUser createUser(HappyUser user) {
+  public ClassroomUser createUser(ClassroomUser user) {
     LOG.debug("createUser=" + user);
     return userDao.createUser(user);
   }
@@ -36,17 +36,17 @@ public class HappyUserServiceImpl implements HappyUserService {
   }
 
   @Override
-  public HappyUser updateUser(HappyUser user) {
+  public ClassroomUser updateUser(ClassroomUser user) {
     return userDao.updateUser(user);
   }
 
   @Override
-  public HappyUser get(Long userId) {
+  public ClassroomUser get(Long userId) {
     return userDao.get(userId);
   }
 
   @Override
-  public List<HappyUser> getAll() {
+  public List<ClassroomUser> getAll() {
     return userDao.getAll();
   }
 

@@ -5,18 +5,18 @@ import java.util.List;
 
 import net.customware.gwt.dispatch.shared.Result;
 
-import com.jlsites.demo.classroom.shared.domain.HappyUser;
+import com.jlsites.demo.classroom.shared.domain.ClassroomUser;
 
 public class GetAllUsersResult implements Result {
 
-  private List<HappyUser> allUsers;
+  private List<ClassroomUser> allUsers;
 
   public GetAllUsersResult() {
   }
 
-  public List<HappyUser> getAllUsers() {
+  public List<ClassroomUser> getAllUsers() {
     if (allUsers == null) {
-      allUsers = new ArrayList<HappyUser>();
+      allUsers = new ArrayList<ClassroomUser>();
     }
     return allUsers;
   }

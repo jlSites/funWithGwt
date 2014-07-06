@@ -10,42 +10,42 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
-import com.jlsites.demo.classroom.shared.domain.HappyUser;
+import com.jlsites.demo.classroom.shared.domain.ClassroomUser;
 
-@Repository(value = "happyUserDao")
-public class HappyUserDaoImpl implements HappyUserDao {
+@Repository(value = "classroomUserDao")
+public class ClassroomUserDaoImpl implements ClassroomUserDao {
 
-  private static final Logger LOG = LoggerFactory.getLogger(HappyUserDaoImpl.class);
+  private static final Logger LOG = LoggerFactory.getLogger(ClassroomUserDaoImpl.class);
 
   @PersistenceContext(unitName = "classroomUnit")
   private EntityManager entityMgr;
 
   @Override
-  public HappyUser createUser(HappyUser user) {
+  public ClassroomUser createUser(ClassroomUser user) {
     LOG.debug("saving " + user);
     return entityMgr.merge(user);
   }
 
   @Override
   public void delete(Long userId) {
-    HappyUser found = entityMgr.find(HappyUser.class, userId);
+    ClassroomUser found = entityMgr.find(ClassroomUser.class, userId);
     entityMgr.remove(found);
   }
 
   @Override
-  public HappyUser updateUser(HappyUser user) {
+  public ClassroomUser updateUser(ClassroomUser user) {
     LOG.debug("updating " + user);
     return entityMgr.merge(user);
   }
 
   @Override
-  public HappyUser get(Long userId) {
-    return entityMgr.find(HappyUser.class, userId);
+  public ClassroomUser get(Long userId) {
+    return entityMgr.find(ClassroomUser.class, userId);
   }
 
   @Override
-  public List<HappyUser> getAll() {
-    Query query = entityMgr.createQuery("FROM HappyUser");
+  public List<ClassroomUser> getAll() {
+    Query query = entityMgr.createQuery("FROM ClassroomUser");
     return query.getResultList();
   }
 

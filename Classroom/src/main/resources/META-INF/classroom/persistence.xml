@@ -6,6 +6,6 @@
   <persistence-unit name="classroomUnit" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
-    <class>com.jlsites.demo.classroom.shared.domain.HappyUser</class>
+    <class>com.jlsites.demo.classroom.shared.domain.ClassroomUser</class>
   </persistence-unit>
 </persistence>

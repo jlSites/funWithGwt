@@ -7,18 +7,18 @@ import net.customware.gwt.dispatch.shared.DispatchException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.jlsites.demo.classroom.server.services.HappyUserService;
+import com.jlsites.demo.classroom.server.services.ClassroomUserService;
 import com.jlsites.demo.classroom.shared.action.AddUserAction;
 import com.jlsites.demo.classroom.shared.action.AddUserResult;
 import com.jlsites.demo.classroom.shared.action.GetAllUsersAction;
 import com.jlsites.demo.classroom.shared.action.GetAllUsersResult;
-import com.jlsites.demo.classroom.shared.domain.HappyUser;
+import com.jlsites.demo.classroom.shared.domain.ClassroomUser;
 
 public class AddUserActionHandler extends SimpleActionHandler<AddUserAction, AddUserResult> {
   private static final Logger LOGGER = LoggerFactory.getLogger(AddUserActionHandler.class);
-  private HappyUserService userService;
+  private ClassroomUserService userService;
 
-  public AddUserActionHandler(HappyUserService userService) {
+  public AddUserActionHandler(ClassroomUserService userService) {
     this.userService = userService;
   }
 
@@ -28,7 +28,7 @@ public class AddUserActionHandler extends SimpleActionHandler<AddUserAction, Add
     LOGGER.debug(">>AddUserActionHandler.execute");
 
     // add an user
-    HappyUser user = new HappyUser();
+    ClassroomUser user = new ClassroomUser();
     user.setUserName(action.getUserName());
     user.setPic(action.getPic());
     userService.createUser(user);
