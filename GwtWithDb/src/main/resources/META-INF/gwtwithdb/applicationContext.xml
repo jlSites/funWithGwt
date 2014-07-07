@@ -19,6 +19,7 @@
         <ref bean="addUserActionHandler" />
         <ref bean="canDispatchActionHandler" />
         <ref bean="getAllUsersActionHandler" />
+        <ref bean="getEnvActionHandler" />
       </list>
     </property>
   </bean>
@@ -32,6 +33,9 @@
   </bean>
 
   <bean id="canDispatchActionHandler" class="com.jlsites.how2gwt.gwtwithdb.server.handler.CanDispatchActionHandler">
+  </bean>
+
+  <bean id="getEnvActionHandler" class="com.jlsites.how2gwt.gwtwithdb.server.handler.GetEnvActionHandler">
   </bean>
 
   <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />

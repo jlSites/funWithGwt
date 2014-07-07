@@ -10,6 +10,7 @@ import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
@@ -18,6 +19,8 @@ import com.jlsites.how2gwt.gwtwithdb.shared.action.AddUserAction;
 import com.jlsites.how2gwt.gwtwithdb.shared.action.AddUserResult;
 import com.jlsites.how2gwt.gwtwithdb.shared.action.CanDispatchAction;
 import com.jlsites.how2gwt.gwtwithdb.shared.action.CanDispatchResult;
+import com.jlsites.how2gwt.gwtwithdb.shared.action.GetEnvAction;
+import com.jlsites.how2gwt.gwtwithdb.shared.action.GetEnvResult;
 import com.jlsites.how2gwt.gwtwithdb.shared.domain.HappyUser;
 
 public class MainView extends Composite {
@@ -36,6 +39,9 @@ public class MainView extends Composite {
   @UiField
   TextBox textUser;
 
+  @UiField
+  HTML htmlEnv;
+
   @Inject
   InforDialog inforDlg;
 
@@ -44,6 +50,32 @@ public class MainView extends Composite {
 
   public MainView() {
     initWidget(uiBinder.createAndBindUi(this));
+  }
+
+  @UiHandler("btnEnv")
+  void getEnv(ClickEvent e) {
+    dispatchAsync.execute(new GetEnvAction(), new AsyncCallback<GetEnvResult>() {
+      @Override
+      public void onFailure(Throwable caught) {
+        htmlEnv.setHTML("");
+
+        inforDlg.setText("Dispatch");
+        inforDlg.setMessage("Failed to dispatch! The detail message is " + caught.getMessage());
+        inforDlg.center();
+      }
+
+      @Override
+      public void onSuccess(GetEnvResult result) {
+        StringBuffer sb = new StringBuffer();
+        for (String key : result.getMapEnv().keySet()) {
+          sb.append(key);
+          sb.append("=");
+          sb.append(result.getMapEnv().get(key));
+          sb.append("<br>");
+        }
+        htmlEnv.setHTML(sb.toString());
+      }
+    });
   }
 
   @UiHandler("btnDispatchMe")

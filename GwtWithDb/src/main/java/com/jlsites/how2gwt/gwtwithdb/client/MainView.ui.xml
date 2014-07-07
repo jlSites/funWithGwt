@@ -55,6 +55,10 @@
     <h2>TODO - MVP (Model + Dumb View + Activity->Presenter + Place History)</h2>
 
     <h2>TODO - i18n</h2>
-    
+
+    <h2>Testing Env for Tomcat Server</h2>
+    <g:Button ui:field="btnEnv">Env</g:Button>
+    <g:HTML ui:field="htmlEnv"></g:HTML>
+
   </g:HTMLPanel>
 </ui:UiBinder> 
