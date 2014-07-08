@@ -1,11 +1,11 @@
 package com.jlsites.demo.classroom.client.ui;
 
 import com.google.gwt.activity.shared.ActivityManager;
+import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.google.web.bindery.event.shared.EventBus;
-import com.jlsites.demo.classroom.client.mvp.ActivityMapperImpl;
 
 @Singleton
 public class MainView extends SimplePanel {
@@ -20,7 +20,7 @@ public class MainView extends SimplePanel {
    * @param eventBus
    */
   @Inject
-  public MainView(ActivityMapperImpl mapper, EventBus eventBus) {
+  public MainView(ActivityMapper mapper, EventBus eventBus) {
     ActivityManager activityManager = new ActivityManager(mapper, eventBus);
     activityManager.setDisplay(this);
   }

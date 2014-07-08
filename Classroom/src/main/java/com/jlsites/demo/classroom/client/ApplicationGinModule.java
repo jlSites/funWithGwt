@@ -15,9 +15,9 @@ public class ApplicationGinModule extends AbstractGinModule {
     bind(MainView.class);
 
     // install the Gin module used to setup the GWT MVP framework classes.
+    install(new ActivityModule());
     install(new MvpModule());
     install(new ViewModule());
-    install(new ActivityModule());
   }
 
 }

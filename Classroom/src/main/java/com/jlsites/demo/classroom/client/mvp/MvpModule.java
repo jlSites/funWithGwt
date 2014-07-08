@@ -1,5 +1,6 @@
 package com.jlsites.demo.classroom.client.mvp;
 
+import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.place.shared.PlaceHistoryHandler;
@@ -21,7 +22,7 @@ public class MvpModule extends AbstractGinModule {
     bind(PlaceHistoryMapper.class).to(ApplicationPlaceHistoryMapper.class).in(Singleton.class);
     // / ActivityMapper maps the place to a new activity instance.
     // You should have one activity mapper for each display area.
-    bind(ActivityMapperImpl.class).in(Singleton.class);
+    bind(ActivityMapper.class).to(ActivityMapperImpl.class).in(Singleton.class);
 
   }
 

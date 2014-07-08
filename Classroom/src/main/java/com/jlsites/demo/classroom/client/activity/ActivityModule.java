@@ -7,8 +7,8 @@ public class ActivityModule extends AbstractGinModule {
   @Override
   protected void configure() {
     bind(HomeActivity.class);
-
     bind(HomeworkActivity.class);
+    bind(UploadFilesActivity.class);
 
   }
 
