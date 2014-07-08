@@ -10,4 +10,6 @@ public interface HasMenus {
   HasClickHandlers getAssessments();
 
   HasClickHandlers getMoreAboutTeacher();
+
+  HasClickHandlers getUploadFiles();
 }

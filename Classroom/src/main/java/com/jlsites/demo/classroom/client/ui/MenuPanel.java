@@ -37,6 +37,8 @@ public class MenuPanel extends Composite implements HasMenus {
   Anchor formsAndDocsAnchor;
   @UiField
   Anchor currentPollAnchor;
+  @UiField
+  Anchor uploadFilesAnchor;
 
   public MenuPanel() {
     initWidget(uiBinder.createAndBindUi(this));
@@ -60,6 +62,11 @@ public class MenuPanel extends Composite implements HasMenus {
   @Override
   public HasClickHandlers getMoreAboutTeacher() {
     return clickTeacherAnchor;
+  }
+
+  @Override
+  public HasClickHandlers getUploadFiles() {
+    return uploadFilesAnchor;
   }
 
 }

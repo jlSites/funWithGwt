@@ -4,14 +4,14 @@ import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
-import com.jlsites.demo.classroom.client.ui.HomeView;
+import com.jlsites.demo.classroom.client.ui.UploadFilesView;
 
-public class HomeActivity extends BasicActivity implements HomeView.Presenter {
+public class UploadFilesActivity extends BasicActivity implements UploadFilesView.Presenter {
 
-  private HomeView view;
+  private UploadFilesView view;
 
   @Inject
-  public HomeActivity(HomeView view, PlaceController placeController) {
+  public UploadFilesActivity(UploadFilesView view, PlaceController placeController) {
     super(view.getHasMenus(), placeController);
     this.view = view;
   }

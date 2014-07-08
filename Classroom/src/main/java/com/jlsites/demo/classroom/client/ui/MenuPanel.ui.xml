@@ -71,5 +71,10 @@
         <img src='images/current-poll.png'></img>
       </g:Anchor>
     </div>
+
+    <div class="{style.subtitleDiv}">
+      Settings
+    </div>
+    <g:Anchor addStyleNames='{style.item}' href='javascript:;' ui:field="uploadFilesAnchor">Upload Files</g:Anchor>
   </g:HTMLPanel>
 </ui:UiBinder> 
