@@ -1,6 +1,7 @@
-package com.jlsites.demo.classroom.client.common;
+package com.jlsites.demo.core.client;
 
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.dom.client.DivElement;
 import com.google.gwt.dom.client.NativeEvent;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.KeyCodes;
@@ -12,12 +13,9 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.DialogBox;
 import com.google.gwt.user.client.ui.Widget;
 
-/**
- * A simple example of an 'about' dialog box.
- */
-public class AboutDialog extends DialogBox {
+public class InforDialog extends DialogBox {
 
-  interface Binder extends UiBinder<Widget, AboutDialog> {
+  interface Binder extends UiBinder<Widget, InforDialog> {
   }
 
   private static final Binder binder = GWT.create(Binder.class);
@@ -25,13 +23,20 @@ public class AboutDialog extends DialogBox {
   @UiField
   Button closeButton;
 
-  public AboutDialog() {
-    // Use this opportunity to set the dialog's caption.
-    setText("About Classroom site");
+  @UiField
+  DivElement textDiv;
+
+  public InforDialog() {
     setWidget(binder.createAndBindUi(this));
 
-    setAnimationEnabled(true);
+    // setAnimationEnabled(true);
     setGlassEnabled(true);
+
+    setModal(true);
+  }
+
+  public void setMessage(String msg) {
+    textDiv.setInnerText(msg);
   }
 
   @Override
@@ -52,7 +57,7 @@ public class AboutDialog extends DialogBox {
   }
 
   @UiHandler("closeButton")
-  void onCloseButtonClicked(ClickEvent event) {
+  void onSignOutClicked(ClickEvent event) {
     hide();
   }
 }

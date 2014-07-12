@@ -9,7 +9,7 @@ import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
-import com.jlsites.demo.classroom.client.common.AboutDialog;
+import com.jlsites.demo.core.client.AboutDialog;
 
 /**
  * The top panel, which contains the 'welcome' message and various links.
