@@ -5,22 +5,11 @@
   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+  <import resource="classpath:META-INF/core/Handlers.xml" />
+
   <context:annotation-config />
   <tx:annotation-driven />
   <context:component-scan base-package="com.jlsites.demo.classroom.server" />
-
-  <bean id="dispatch" class="net.customware.gwt.dispatch.server.spring.SpringDispatch">
-    <constructor-arg index="0" ref="actionHandlerRegistry" />
-  </bean>
-
-  <bean id="actionHandlerRegistry" class="net.customware.gwt.dispatch.server.DefaultActionHandlerRegistry">
-    <property name="actionHandlers">
-      <list>
-        <ref bean="addUserActionHandler" />
-        <ref bean="getAllUsersActionHandler" />
-      </list>
-    </property>
-  </bean>
 
   <bean id="addUserActionHandler" class="com.jlsites.demo.classroom.server.handler.AddUserActionHandler">
     <constructor-arg ref="ClassroomUserServiceImpl" />
