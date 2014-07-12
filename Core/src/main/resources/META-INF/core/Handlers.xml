@@ -3,7 +3,7 @@
   xsi:schemaLocation="
 	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-  <bean id="actionHandlerRegistry" class="com.jlsites.demo.core.server.SpringEnabledActionHandlerRegistry" />
+  <bean id="actionHandlerRegistry" class="com.jlsites.demo.core.server.ContextAwaredActionHandlerRegistry" />
 
   <bean id="net.customware.gwt.dispatch.server.Dispatch" class="net.customware.gwt.dispatch.server.spring.SpringDispatch">
     <constructor-arg index="0" ref="actionHandlerRegistry" />

@@ -20,6 +20,7 @@
   <inherits name='net.customware.gwt.dispatch.Dispatch' />
   <inherits name="com.google.gwt.activity.Activity" />
 
+  <!-- Include GWTUpload library -->
   <inherits name="gwtupload.GWTUpload" />
 
   <!-- Specify the paths for translatable code -->
