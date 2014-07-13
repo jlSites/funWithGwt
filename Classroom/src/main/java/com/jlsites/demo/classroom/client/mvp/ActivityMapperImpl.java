@@ -13,30 +13,30 @@ import com.jlsites.demo.classroom.client.place.UploadFilesPlace;
 
 public class ActivityMapperImpl implements ActivityMapper {
 
-  @Inject
-  private HomeActivity homeActivity;
+	@Inject
+	private HomeActivity homeActivity;
 
-  @Inject
-  private HomeworkActivity homeworkActivity;
+	@Inject
+	private HomeworkActivity homeworkActivity;
 
-  @Inject
-  private UploadFilesActivity uploadFilesActivity;
+	@Inject
+	private UploadFilesActivity uploadFilesActivity;
 
-  public ActivityMapperImpl() {
-    super();
-  }
+	public ActivityMapperImpl() {
+		super();
+	}
 
-  @Override
-  public Activity getActivity(Place place) {
-    if (place instanceof HomePlace) {
-      return homeActivity;
-    } else if (place instanceof HomeworkPlace) {
-      return homeworkActivity;
-    } else if (place instanceof UploadFilesPlace) {
-      return uploadFilesActivity;
-    }
+	@Override
+	public Activity getActivity(Place place) {
+		if (place instanceof HomePlace) {
+			return homeActivity;
+		} else if (place instanceof HomeworkPlace) {
+			return homeworkActivity;
+		} else if (place instanceof UploadFilesPlace) {
+			return uploadFilesActivity;
+		}
 
-    return null;
-  }
+		return null;
+	}
 
 }

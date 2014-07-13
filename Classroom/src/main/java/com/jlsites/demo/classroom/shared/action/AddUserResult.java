@@ -9,16 +9,16 @@ import net.customware.gwt.dispatch.shared.Result;
 
 public class AddUserResult implements Result {
 
-  private List<ClassroomUser> allUsers;
+	private List<ClassroomUser> allUsers;
 
-  public AddUserResult() {
-  }
+	public AddUserResult() {
+	}
 
-  public List<ClassroomUser> getAllUsers() {
-    if (allUsers == null) {
-      allUsers = new ArrayList<ClassroomUser>();
-    }
-    return allUsers;
-  }
+	public List<ClassroomUser> getAllUsers() {
+		if (allUsers == null) {
+			allUsers = new ArrayList<ClassroomUser>();
+		}
+		return allUsers;
+	}
 
 }

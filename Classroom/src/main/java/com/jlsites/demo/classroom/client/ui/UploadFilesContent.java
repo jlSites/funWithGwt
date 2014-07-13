@@ -7,14 +7,15 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class UploadFilesContent extends Composite {
 
-  private static UploadFilesContentUiBinder uiBinder = GWT
-      .create(UploadFilesContentUiBinder.class);
+	private static UploadFilesContentUiBinder uiBinder = GWT
+			.create(UploadFilesContentUiBinder.class);
 
-  interface UploadFilesContentUiBinder extends UiBinder<Widget, UploadFilesContent> {
-  }
+	interface UploadFilesContentUiBinder extends
+			UiBinder<Widget, UploadFilesContent> {
+	}
 
-  public UploadFilesContent() {
-    initWidget(uiBinder.createAndBindUi(this));
-  }
+	public UploadFilesContent() {
+		initWidget(uiBinder.createAndBindUi(this));
+	}
 
 }

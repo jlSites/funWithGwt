@@ -9,12 +9,13 @@ import com.jlsites.demo.classroom.client.place.MoreAboutTeacherPlace;
 import com.jlsites.demo.classroom.client.place.UploadFilesPlace;
 
 /**
- * PlaceHistoryMapper interface is used to attach all places which the PlaceHistoryHandler should be
- * aware of. This is done via the @WithTokenizers annotation or by extending
- * PlaceHistoryMapperWithFactory and creating a separate TokenizerFactory.
+ * PlaceHistoryMapper interface is used to attach all places which the
+ * PlaceHistoryHandler should be aware of. This is done via the @WithTokenizers
+ * annotation or by extending PlaceHistoryMapperWithFactory and creating a
+ * separate TokenizerFactory.
  */
-@WithTokenizers({
-    HomePlace.Tokenizer.class, HomeworkPlace.Tokenizer.class, AssessmentsPlace.Tokenizer.class,
-    MoreAboutTeacherPlace.Tokenizer.class, UploadFilesPlace.Tokenizer.class})
+@WithTokenizers({ HomePlace.Tokenizer.class, HomeworkPlace.Tokenizer.class,
+		AssessmentsPlace.Tokenizer.class,
+		MoreAboutTeacherPlace.Tokenizer.class, UploadFilesPlace.Tokenizer.class })
 public interface ApplicationPlaceHistoryMapper extends PlaceHistoryMapper {
 }

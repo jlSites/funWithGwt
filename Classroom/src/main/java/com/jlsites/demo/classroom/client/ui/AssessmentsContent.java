@@ -7,13 +7,14 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class AssessmentsContent extends Composite {
 
-  private static AssessmentsUiBinder uiBinder = GWT.create(AssessmentsUiBinder.class);
+	private static AssessmentsUiBinder uiBinder = GWT
+			.create(AssessmentsUiBinder.class);
 
-  interface AssessmentsUiBinder extends UiBinder<Widget, AssessmentsContent> {
-  }
+	interface AssessmentsUiBinder extends UiBinder<Widget, AssessmentsContent> {
+	}
 
-  public AssessmentsContent() {
-    initWidget(uiBinder.createAndBindUi(this));
-  }
+	public AssessmentsContent() {
+		initWidget(uiBinder.createAndBindUi(this));
+	}
 
 }

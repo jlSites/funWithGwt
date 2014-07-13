@@ -1,62 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
               http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-  version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+	version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
 
-  <!-- context path used by context loader listener -->
-  <context-param>
-    <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:META-INF/classroom/applicationContext.xml</param-value>
-  </context-param>
+	<!-- context path used by context loader listener -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:META-INF/classroom/applicationContext.xml</param-value>
+	</context-param>
 
-  <context-param>
-    <param-name>log4jConfigLocation</param-name>
-    <param-value>classpath:log4j.properties</param-value>
-  </context-param>
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>classpath:log4j.properties</param-value>
+	</context-param>
 
-  <context-param>
-    <!-- max size of the upload request -->
-    <param-name>maxSize</param-name>
-    <param-value>3145728</param-value>
-  </context-param>
-  <context-param>
-    <!-- Useful in development mode to slow down the uploads in fast networks. Put the number of milliseconds 
-      to sleep in each block received in the server. false or 0, means don't use slow uploads -->
-    <param-name>slowUploads</param-name>
-    <param-value>200</param-value>
-  </context-param>
+	<context-param>
+		<!-- max size of the upload request -->
+		<param-name>maxSize</param-name>
+		<param-value>3145728</param-value>
+	</context-param>
+	<context-param>
+		<!-- Useful in development mode to slow down the uploads in fast networks. 
+			Put the number of milliseconds to sleep in each block received in the server. 
+			false or 0, means don't use slow uploads -->
+		<param-name>slowUploads</param-name>
+		<param-value>200</param-value>
+	</context-param>
 
-  <!-- dispatch servlet used for gwt-dispatch -->
-  <servlet>
-    <servlet-name>dispatch</servlet-name>
-    <servlet-class>net.customware.gwt.dispatch.server.spring.SpringStandardDispatchServlet</servlet-class>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
+	<!-- dispatch servlet used for gwt-dispatch -->
+	<servlet>
+		<servlet-name>dispatch</servlet-name>
+		<servlet-class>net.customware.gwt.dispatch.server.spring.SpringStandardDispatchServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
 
-  <servlet-mapping>
-    <servlet-name>dispatch</servlet-name>
-    <url-pattern>/classroom/dispatch</url-pattern>
-  </servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dispatch</servlet-name>
+		<url-pattern>/classroom/dispatch</url-pattern>
+	</servlet-mapping>
 
-  <servlet>
-    <servlet-name>uploadServlet</servlet-name>
-    <!-- This is the default servlet, it puts files in session -->
-    <servlet-class>gwtupload.server.UploadServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>uploadServlet</servlet-name>
-    <url-pattern>*.gupld</url-pattern>
-  </servlet-mapping>
+	<servlet>
+		<servlet-name>uploadServlet</servlet-name>
+		<!-- This is the default servlet, it puts files in session -->
+		<servlet-class>gwtupload.server.UploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>uploadServlet</servlet-name>
+		<url-pattern>*.gupld</url-pattern>
+	</servlet-mapping>
 
-  <!-- load the web application context, which will look for context param 'contextConfigLocation' as 
-    above -->
-  <listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>
+	<!-- load the web application context, which will look for context param 
+		'contextConfigLocation' as above -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
 
-  <welcome-file-list>
-    <welcome-file>Classroom.html</welcome-file>
-    <welcome-file>index.html</welcome-file>
-  </welcome-file-list>
+	<welcome-file-list>
+		<welcome-file>Classroom.html</welcome-file>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
 </web-app>

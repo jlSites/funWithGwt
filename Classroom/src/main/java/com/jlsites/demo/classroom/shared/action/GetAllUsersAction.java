@@ -4,6 +4,6 @@ import net.customware.gwt.dispatch.shared.Action;
 
 public class GetAllUsersAction implements Action<GetAllUsersResult> {
 
-  public GetAllUsersAction() {
-  }
+	public GetAllUsersAction() {
+	}
 }

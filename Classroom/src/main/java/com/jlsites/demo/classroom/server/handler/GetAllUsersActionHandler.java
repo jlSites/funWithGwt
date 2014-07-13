@@ -12,24 +12,25 @@ import com.jlsites.demo.classroom.shared.action.GetAllUsersAction;
 import com.jlsites.demo.classroom.shared.action.GetAllUsersResult;
 
 public class GetAllUsersActionHandler extends
-    SimpleActionHandler<GetAllUsersAction, GetAllUsersResult> {
-  private static final Logger LOGGER = LoggerFactory.getLogger(GetAllUsersActionHandler.class);
-  private ClassroomUserService userService;
+		SimpleActionHandler<GetAllUsersAction, GetAllUsersResult> {
+	private static final Logger LOGGER = LoggerFactory
+			.getLogger(GetAllUsersActionHandler.class);
+	private ClassroomUserService userService;
 
-  public GetAllUsersActionHandler(ClassroomUserService userService) {
-    this.userService = userService;
-  }
+	public GetAllUsersActionHandler(ClassroomUserService userService) {
+		this.userService = userService;
+	}
 
-  @Override
-  public GetAllUsersResult execute(GetAllUsersAction action, ExecutionContext context)
-      throws DispatchException {
-    LOGGER.debug(">>GetAllUsersActionHandler.execute");
+	@Override
+	public GetAllUsersResult execute(GetAllUsersAction action,
+			ExecutionContext context) throws DispatchException {
+		LOGGER.debug(">>GetAllUsersActionHandler.execute");
 
-    // get all users
-    GetAllUsersResult rlt = new GetAllUsersResult();
-    rlt.getAllUsers().addAll(userService.getAll());
+		// get all users
+		GetAllUsersResult rlt = new GetAllUsersResult();
+		rlt.getAllUsers().addAll(userService.getAll());
 
-    return rlt;
-  }
+		return rlt;
+	}
 
 }

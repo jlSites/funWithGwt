@@ -7,13 +7,14 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class FooterPanel extends Composite {
 
-  private static FooterPanelUiBinder uiBinder = GWT.create(FooterPanelUiBinder.class);
+	private static FooterPanelUiBinder uiBinder = GWT
+			.create(FooterPanelUiBinder.class);
 
-  interface FooterPanelUiBinder extends UiBinder<Widget, FooterPanel> {
-  }
+	interface FooterPanelUiBinder extends UiBinder<Widget, FooterPanel> {
+	}
 
-  public FooterPanel() {
-    initWidget(uiBinder.createAndBindUi(this));
-  }
+	public FooterPanel() {
+		initWidget(uiBinder.createAndBindUi(this));
+	}
 
 }

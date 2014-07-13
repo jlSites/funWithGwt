@@ -15,39 +15,40 @@ import com.jlsites.demo.classroom.shared.domain.ClassroomUser;
 @Service(value = "ClassroomUserServiceImpl")
 @Transactional
 public class ClassroomUserServiceImpl implements ClassroomUserService {
-  private static final Logger LOG = LoggerFactory.getLogger(ClassroomUserServiceImpl.class);
+	private static final Logger LOG = LoggerFactory
+			.getLogger(ClassroomUserServiceImpl.class);
 
-  private ClassroomUserDao userDao;
+	private ClassroomUserDao userDao;
 
-  @Autowired
-  public ClassroomUserServiceImpl(ClassroomUserDao userDao) {
-    this.userDao = userDao;
-  }
+	@Autowired
+	public ClassroomUserServiceImpl(ClassroomUserDao userDao) {
+		this.userDao = userDao;
+	}
 
-  @Override
-  public ClassroomUser createUser(ClassroomUser user) {
-    LOG.debug("createUser=" + user);
-    return userDao.createUser(user);
-  }
+	@Override
+	public ClassroomUser createUser(ClassroomUser user) {
+		LOG.debug("createUser=" + user);
+		return userDao.createUser(user);
+	}
 
-  @Override
-  public void delete(Long userId) {
-    userDao.delete(userId);
-  }
+	@Override
+	public void delete(Long userId) {
+		userDao.delete(userId);
+	}
 
-  @Override
-  public ClassroomUser updateUser(ClassroomUser user) {
-    return userDao.updateUser(user);
-  }
+	@Override
+	public ClassroomUser updateUser(ClassroomUser user) {
+		return userDao.updateUser(user);
+	}
 
-  @Override
-  public ClassroomUser get(Long userId) {
-    return userDao.get(userId);
-  }
+	@Override
+	public ClassroomUser get(Long userId) {
+		return userDao.get(userId);
+	}
 
-  @Override
-  public List<ClassroomUser> getAll() {
-    return userDao.getAll();
-  }
+	@Override
+	public List<ClassroomUser> getAll() {
+		return userDao.getAll();
+	}
 
 }

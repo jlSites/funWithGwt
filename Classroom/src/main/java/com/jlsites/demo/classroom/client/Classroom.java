@@ -12,21 +12,23 @@ import com.google.gwt.user.client.ui.RootPanel;
  */
 public class Classroom implements EntryPoint {
 
-  interface GlobalResources extends ClientBundle {
-    @NotStrict
-    @Source("global.css")
-    CssResource css();
-  }
+	interface GlobalResources extends ClientBundle {
+		@NotStrict
+		@Source("global.css")
+		CssResource css();
+	}
 
-  private final ApplicationGinjector ginjector = GWT.create(ApplicationGinjector.class);
+	private final ApplicationGinjector ginjector = GWT
+			.create(ApplicationGinjector.class);
 
-  public void onModuleLoad() {
-    // Inject global styles.
-    GWT.<GlobalResources> create(GlobalResources.class).css().ensureInjected();
+	public void onModuleLoad() {
+		// Inject global styles.
+		GWT.<GlobalResources> create(GlobalResources.class).css()
+				.ensureInjected();
 
-    RootPanel.get().add(ginjector.getAppWidget());
+		RootPanel.get().add(ginjector.getAppWidget());
 
-    // Goes to place represented on URL or default place
-    ginjector.getPlaceHistoryHandler().handleCurrentHistory();
-  }
+		// Goes to place represented on URL or default place
+		ginjector.getPlaceHistoryHandler().handleCurrentHistory();
+	}
 }

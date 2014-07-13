@@ -1,20 +1,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-  <modelVersion>4.0.0</modelVersion>
-  <artifactId>classroom</artifactId>
-  <packaging>war</packaging>
-  <name>com.jlsites.demo.Classroom</name>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>classroom</artifactId>
+	<packaging>war</packaging>
+	<name>com.jlsites.demo.Classroom</name>
 
-  <parent>
-    <groupId>com.jlsites.demo</groupId>
-    <artifactId>parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <relativePath>../Parent/pom.xml</relativePath>
-  </parent>
+	<parent>
+		<groupId>com.jlsites.demo</groupId>
+		<artifactId>parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../Parent/pom.xml</relativePath>
+	</parent>
 
-  <properties>
-    <gwt-module>com.jlsites.demo.classroom.Classroom</gwt-module>
-  </properties>
+	<properties>
+		<gwt-module>com.jlsites.demo.classroom.Classroom</gwt-module>
+	</properties>
 
 </project>

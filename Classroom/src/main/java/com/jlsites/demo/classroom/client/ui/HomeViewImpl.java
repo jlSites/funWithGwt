@@ -8,34 +8,35 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class HomeViewImpl extends Composite implements HomeView {
 
-  private static HomeViewImplUiBinder uiBinder = GWT.create(HomeViewImplUiBinder.class);
+	private static HomeViewImplUiBinder uiBinder = GWT
+			.create(HomeViewImplUiBinder.class);
 
-  interface HomeViewImplUiBinder extends UiBinder<Widget, HomeViewImpl> {
-  }
+	interface HomeViewImplUiBinder extends UiBinder<Widget, HomeViewImpl> {
+	}
 
-  private Presenter presenter;
+	private Presenter presenter;
 
-  @UiField
-  TopPanel topPanel;
+	@UiField
+	TopPanel topPanel;
 
-  @UiField
-  MenuPanel menuPanel;
+	@UiField
+	MenuPanel menuPanel;
 
-  @UiField
-  FooterPanel footerPanel;
+	@UiField
+	FooterPanel footerPanel;
 
-  public HomeViewImpl() {
-    initWidget(uiBinder.createAndBindUi(this));
-  }
+	public HomeViewImpl() {
+		initWidget(uiBinder.createAndBindUi(this));
+	}
 
-  @Override
-  public void setPresenter(Presenter p) {
-    this.presenter = p;
-  }
+	@Override
+	public void setPresenter(Presenter p) {
+		this.presenter = p;
+	}
 
-  @Override
-  public HasMenus getHasMenus() {
-    return menuPanel;
-  }
+	@Override
+	public HasMenus getHasMenus() {
+		return menuPanel;
+	}
 
 }

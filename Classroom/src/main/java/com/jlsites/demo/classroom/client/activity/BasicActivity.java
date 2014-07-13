@@ -13,47 +13,47 @@ import com.jlsites.demo.classroom.client.place.UploadFilesPlace;
 import com.jlsites.demo.classroom.client.ui.HasMenus;
 
 public abstract class BasicActivity extends AbstractActivity {
-  private PlaceController placeController;
-  private HasMenus hasMenus;
+	private PlaceController placeController;
+	private HasMenus hasMenus;
 
-  public BasicActivity(HasMenus hasMenus, PlaceController placeController) {
-    this.hasMenus = hasMenus;
-    this.placeController = placeController;
+	public BasicActivity(HasMenus hasMenus, PlaceController placeController) {
+		this.hasMenus = hasMenus;
+		this.placeController = placeController;
 
-    bindMenus();
-  }
+		bindMenus();
+	}
 
-  public void bindMenus() {
-    MenuClickHandler menuHandler = new MenuClickHandler();
-    hasMenus.getHome().addClickHandler(menuHandler);
-    hasMenus.getHomework().addClickHandler(menuHandler);
-    hasMenus.getAssessments().addClickHandler(menuHandler);
-    hasMenus.getMoreAboutTeacher().addClickHandler(menuHandler);
-    hasMenus.getUploadFiles().addClickHandler(menuHandler);
-  }
+	public void bindMenus() {
+		MenuClickHandler menuHandler = new MenuClickHandler();
+		hasMenus.getHome().addClickHandler(menuHandler);
+		hasMenus.getHomework().addClickHandler(menuHandler);
+		hasMenus.getAssessments().addClickHandler(menuHandler);
+		hasMenus.getMoreAboutTeacher().addClickHandler(menuHandler);
+		hasMenus.getUploadFiles().addClickHandler(menuHandler);
+	}
 
-  /**
-   * Navigate to a new Place in the browser
-   */
-  public void goTo(Place place) {
-    placeController.goTo(place);
-  }
+	/**
+	 * Navigate to a new Place in the browser
+	 */
+	public void goTo(Place place) {
+		placeController.goTo(place);
+	}
 
-  class MenuClickHandler implements ClickHandler {
-    @Override
-    public void onClick(ClickEvent event) {
-      Object eSource = event.getSource();
-      if (eSource == hasMenus.getHome()) {
-        placeController.goTo(new HomePlace());
-      } else if (eSource == hasMenus.getHomework()) {
-        placeController.goTo(new HomeworkPlace());
-      } else if (eSource == hasMenus.getAssessments()) {
-        placeController.goTo(new AssessmentsPlace());
-      } else if (eSource == hasMenus.getMoreAboutTeacher()) {
-        placeController.goTo(new MoreAboutTeacherPlace());
-      } else if (eSource == hasMenus.getUploadFiles()) {
-        placeController.goTo(new UploadFilesPlace());
-      }
-    }
-  }
+	class MenuClickHandler implements ClickHandler {
+		@Override
+		public void onClick(ClickEvent event) {
+			Object eSource = event.getSource();
+			if (eSource == hasMenus.getHome()) {
+				placeController.goTo(new HomePlace());
+			} else if (eSource == hasMenus.getHomework()) {
+				placeController.goTo(new HomeworkPlace());
+			} else if (eSource == hasMenus.getAssessments()) {
+				placeController.goTo(new AssessmentsPlace());
+			} else if (eSource == hasMenus.getMoreAboutTeacher()) {
+				placeController.goTo(new MoreAboutTeacherPlace());
+			} else if (eSource == hasMenus.getUploadFiles()) {
+				placeController.goTo(new UploadFilesPlace());
+			}
+		}
+	}
 }

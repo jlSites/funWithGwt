@@ -5,11 +5,11 @@ import com.google.gwt.user.client.ui.IsWidget;
 
 public interface UploadFilesView extends IsWidget {
 
-  interface Presenter {
-    void goTo(Place place);
-  }
+	interface Presenter {
+		void goTo(Place place);
+	}
 
-  void setPresenter(Presenter p);
+	void setPresenter(Presenter p);
 
-  HasMenus getHasMenus();
+	HasMenus getHasMenus();
 }

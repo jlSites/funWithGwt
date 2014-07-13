@@ -8,20 +8,20 @@ import com.jlsites.demo.classroom.client.ui.HomeView;
 
 public class HomeActivity extends BasicActivity implements HomeView.Presenter {
 
-  private HomeView view;
+	private HomeView view;
 
-  @Inject
-  public HomeActivity(HomeView view, PlaceController placeController) {
-    super(view.getHasMenus(), placeController);
-    this.view = view;
-  }
+	@Inject
+	public HomeActivity(HomeView view, PlaceController placeController) {
+		super(view.getHasMenus(), placeController);
+		this.view = view;
+	}
 
-  /**
-   * Invoked by the ActivityManager to start a new Activity
-   */
-  @Override
-  public void start(AcceptsOneWidget containerWidget, EventBus eventBus) {
-    view.setPresenter(this);
-    containerWidget.setWidget(view.asWidget());
-  }
+	/**
+	 * Invoked by the ActivityManager to start a new Activity
+	 */
+	@Override
+	public void start(AcceptsOneWidget containerWidget, EventBus eventBus) {
+		view.setPresenter(this);
+		containerWidget.setWidget(view.asWidget());
+	}
 }

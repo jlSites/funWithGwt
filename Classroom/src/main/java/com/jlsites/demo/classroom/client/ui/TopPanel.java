@@ -16,32 +16,32 @@ import com.jlsites.demo.core.client.AboutDialog;
  */
 public class TopPanel extends Composite {
 
-  interface Binder extends UiBinder<Widget, TopPanel> {
-  }
+	interface Binder extends UiBinder<Widget, TopPanel> {
+	}
 
-  private static final Binder binder = GWT.create(Binder.class);
+	private static final Binder binder = GWT.create(Binder.class);
 
-  @UiField
-  Anchor signOutLink;
-  @UiField
-  Anchor aboutLink;
+	@UiField
+	Anchor signOutLink;
+	@UiField
+	Anchor aboutLink;
 
-  public TopPanel() {
-    initWidget(binder.createAndBindUi(this));
-  }
+	public TopPanel() {
+		initWidget(binder.createAndBindUi(this));
+	}
 
-  @UiHandler("aboutLink")
-  void onAboutClicked(ClickEvent event) {
-    // When the 'About' item is selected, show the AboutDialog.
-    // Note that showing a dialog box does not block -- execution continues
-    // normally, and the dialog fires an event when it is closed.
-    AboutDialog dlg = new AboutDialog();
-    dlg.show();
-    dlg.center();
-  }
+	@UiHandler("aboutLink")
+	void onAboutClicked(ClickEvent event) {
+		// When the 'About' item is selected, show the AboutDialog.
+		// Note that showing a dialog box does not block -- execution continues
+		// normally, and the dialog fires an event when it is closed.
+		AboutDialog dlg = new AboutDialog();
+		dlg.show();
+		dlg.center();
+	}
 
-  @UiHandler("signOutLink")
-  void onSignOutClicked(ClickEvent event) {
-    Window.alert("If this were implemented, you would be signed out now.");
-  }
+	@UiHandler("signOutLink")
+	void onSignOutClicked(ClickEvent event) {
+		Window.alert("If this were implemented, you would be signed out now.");
+	}
 }

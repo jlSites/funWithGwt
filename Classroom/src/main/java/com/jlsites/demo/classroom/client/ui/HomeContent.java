@@ -7,13 +7,13 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class HomeContent extends Composite {
 
-  private static HomeUiBinder uiBinder = GWT.create(HomeUiBinder.class);
+	private static HomeUiBinder uiBinder = GWT.create(HomeUiBinder.class);
 
-  interface HomeUiBinder extends UiBinder<Widget, HomeContent> {
-  }
+	interface HomeUiBinder extends UiBinder<Widget, HomeContent> {
+	}
 
-  public HomeContent() {
-    initWidget(uiBinder.createAndBindUi(this));
-  }
+	public HomeContent() {
+		initWidget(uiBinder.createAndBindUi(this));
+	}
 
 }

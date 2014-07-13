@@ -5,11 +5,12 @@ import com.google.inject.Singleton;
 
 public class ViewModule extends AbstractGinModule {
 
-  @Override
-  protected void configure() {
-    bind(HomeView.class).to(HomeViewImpl.class).in(Singleton.class);
-    bind(HomeworkView.class).to(HomeworkViewImpl.class).in(Singleton.class);
-    bind(UploadFilesView.class).to(UploadFilesViewImpl.class).in(Singleton.class);
-  }
+	@Override
+	protected void configure() {
+		bind(HomeView.class).to(HomeViewImpl.class).in(Singleton.class);
+		bind(HomeworkView.class).to(HomeworkViewImpl.class).in(Singleton.class);
+		bind(UploadFilesView.class).to(UploadFilesViewImpl.class).in(
+				Singleton.class);
+	}
 
 }

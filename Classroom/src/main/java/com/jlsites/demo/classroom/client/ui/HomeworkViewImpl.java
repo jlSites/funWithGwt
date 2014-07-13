@@ -8,34 +8,36 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class HomeworkViewImpl extends Composite implements HomeworkView {
 
-  private static HomeworkViewImplUiBinder uiBinder = GWT.create(HomeworkViewImplUiBinder.class);
+	private static HomeworkViewImplUiBinder uiBinder = GWT
+			.create(HomeworkViewImplUiBinder.class);
 
-  interface HomeworkViewImplUiBinder extends UiBinder<Widget, HomeworkViewImpl> {
-  }
+	interface HomeworkViewImplUiBinder extends
+			UiBinder<Widget, HomeworkViewImpl> {
+	}
 
-  private Presenter presenter;
+	private Presenter presenter;
 
-  @UiField
-  TopPanel topPanel;
+	@UiField
+	TopPanel topPanel;
 
-  @UiField
-  MenuPanel menuPanel;
+	@UiField
+	MenuPanel menuPanel;
 
-  @UiField
-  FooterPanel footerPanel;
+	@UiField
+	FooterPanel footerPanel;
 
-  public HomeworkViewImpl() {
-    initWidget(uiBinder.createAndBindUi(this));
-  }
+	public HomeworkViewImpl() {
+		initWidget(uiBinder.createAndBindUi(this));
+	}
 
-  @Override
-  public void setPresenter(Presenter p) {
-    this.presenter = p;
-  }
+	@Override
+	public void setPresenter(Presenter p) {
+		this.presenter = p;
+	}
 
-  @Override
-  public HasMenus getHasMenus() {
-    return menuPanel;
-  }
+	@Override
+	public HasMenus getHasMenus() {
+		return menuPanel;
+	}
 
 }

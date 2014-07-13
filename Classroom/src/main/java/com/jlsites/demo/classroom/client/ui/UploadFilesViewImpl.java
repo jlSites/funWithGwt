@@ -8,35 +8,36 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class UploadFilesViewImpl extends Composite implements UploadFilesView {
 
-  private static UploadFilesViewImplUiBinder uiBinder = GWT
-      .create(UploadFilesViewImplUiBinder.class);
+	private static UploadFilesViewImplUiBinder uiBinder = GWT
+			.create(UploadFilesViewImplUiBinder.class);
 
-  interface UploadFilesViewImplUiBinder extends UiBinder<Widget, UploadFilesViewImpl> {
-  }
+	interface UploadFilesViewImplUiBinder extends
+			UiBinder<Widget, UploadFilesViewImpl> {
+	}
 
-  private Presenter presenter;
+	private Presenter presenter;
 
-  @UiField
-  TopPanel topPanel;
+	@UiField
+	TopPanel topPanel;
 
-  @UiField
-  MenuPanel menuPanel;
+	@UiField
+	MenuPanel menuPanel;
 
-  @UiField
-  FooterPanel footerPanel;
+	@UiField
+	FooterPanel footerPanel;
 
-  public UploadFilesViewImpl() {
-    initWidget(uiBinder.createAndBindUi(this));
-  }
+	public UploadFilesViewImpl() {
+		initWidget(uiBinder.createAndBindUi(this));
+	}
 
-  @Override
-  public void setPresenter(Presenter p) {
-    this.presenter = p;
-  }
+	@Override
+	public void setPresenter(Presenter p) {
+		this.presenter = p;
+	}
 
-  @Override
-  public HasMenus getHasMenus() {
-    return menuPanel;
-  }
+	@Override
+	public HasMenus getHasMenus() {
+		return menuPanel;
+	}
 
 }

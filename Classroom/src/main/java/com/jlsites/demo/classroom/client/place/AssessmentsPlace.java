@@ -4,32 +4,32 @@ import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;
 
 public class AssessmentsPlace extends Place {
-  private static final String TOKEN = "ASSESSMENTS";
-  private String token;
+	private static final String TOKEN = "ASSESSMENTS";
+	private String token;
 
-  public AssessmentsPlace() {
-    this(TOKEN);
-  }
+	public AssessmentsPlace() {
+		this(TOKEN);
+	}
 
-  private AssessmentsPlace(String strToken) {
-    token = strToken;
-  }
+	private AssessmentsPlace(String strToken) {
+		token = strToken;
+	}
 
-  public String getToken() {
-    return token;
-  }
+	public String getToken() {
+		return token;
+	}
 
-  public static class Tokenizer implements PlaceTokenizer<AssessmentsPlace> {
+	public static class Tokenizer implements PlaceTokenizer<AssessmentsPlace> {
 
-    @Override
-    public String getToken(AssessmentsPlace place) {
-      return place.getToken();
-    }
+		@Override
+		public String getToken(AssessmentsPlace place) {
+			return place.getToken();
+		}
 
-    @Override
-    public AssessmentsPlace getPlace(String token) {
-      return new AssessmentsPlace(token);
-    }
+		@Override
+		public AssessmentsPlace getPlace(String token) {
+			return new AssessmentsPlace(token);
+		}
 
-  }
+	}
 }
