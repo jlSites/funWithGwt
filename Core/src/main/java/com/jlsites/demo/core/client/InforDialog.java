@@ -29,7 +29,7 @@ public class InforDialog extends DialogBox {
 	public InforDialog() {
 		setWidget(binder.createAndBindUi(this));
 
-		// setAnimationEnabled(true);
+		setAnimationEnabled(true);
 		setGlassEnabled(true);
 
 		setModal(true);

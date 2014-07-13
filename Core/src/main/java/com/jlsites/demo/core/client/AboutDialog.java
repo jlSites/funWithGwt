@@ -30,7 +30,7 @@ public class AboutDialog extends DialogBox {
 		setText("About Classroom site");
 		setWidget(binder.createAndBindUi(this));
 
-		// setAnimationEnabled(true);
+		setAnimationEnabled(true);
 		setGlassEnabled(true);
 	}
 
