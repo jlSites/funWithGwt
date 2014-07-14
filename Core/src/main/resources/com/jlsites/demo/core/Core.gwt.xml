@@ -19,9 +19,19 @@
 	<inherits name='com.google.gwt.inject.Inject' />
 	<inherits name='net.customware.gwt.dispatch.Dispatch' />
 	<inherits name="com.google.gwt.activity.Activity" />
-
-	<!-- Include GWTUpload library -->
 	<inherits name="gwtupload.GWTUpload" />
+	<inherits name="com.google.gwt.logging.Logging" />
+
+	<set-property name="gwt.logging.enabled" value="TRUE" />
+	<set-property name="gwt.logging.logLevel" value="FINE" />
+	<set-property name="gwt.logging.firebugHandler" value="DISABLED" />
+	<set-property name="gwt.logging.simpleRemoteHandler"
+		value="DISABLED" />
+	<set-property name="gwt.logging.consoleHandler" value="DISABLED" />
+	<set-property name="gwt.logging.developmentModeHandler"
+		value="DISABLED" />
+	<set-property name="gwt.logging.popupHandler" value="DISABLED" />
+	<set-property name="gwt.logging.systemHandler" value="ENABLED" />
 
 	<!-- Specify the paths for translatable code -->
 	<source path='client' />

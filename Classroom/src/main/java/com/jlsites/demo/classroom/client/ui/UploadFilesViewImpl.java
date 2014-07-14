@@ -1,5 +1,7 @@
 package com.jlsites.demo.classroom.client.ui;
 
+import gwtupload.client.IUploader;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
@@ -26,6 +28,9 @@ public class UploadFilesViewImpl extends Composite implements UploadFilesView {
 	@UiField
 	FooterPanel footerPanel;
 
+	@UiField
+	UploadFilesContent uploadFilesContent;
+
 	public UploadFilesViewImpl() {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
@@ -38,6 +43,11 @@ public class UploadFilesViewImpl extends Composite implements UploadFilesView {
 	@Override
 	public HasMenus getHasMenus() {
 		return menuPanel;
+	}
+
+	@Override
+	public IUploader getUploader() {
+		return uploadFilesContent.getUploader();
 	}
 
 }

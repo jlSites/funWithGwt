@@ -24,4 +24,7 @@ public class UploadFilesContent extends Composite {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
+	public SingleUploader getUploader() {
+		return uploader;
+	}
 }
