@@ -8,11 +8,19 @@ import gwtupload.client.IUploader.UploadedInfo;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import net.customware.gwt.dispatch.client.DispatchAsync;
+
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.PlaceController;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
 import com.jlsites.demo.classroom.client.ui.UploadFilesView;
+import com.jlsites.demo.classroom.shared.action.ListUploadsAction;
+import com.jlsites.demo.classroom.shared.action.ListUploadsResult;
+import com.jlsites.demo.core.client.InforDialog;
 
 public class UploadFilesActivity extends BasicActivity implements
 		UploadFilesView.Presenter {
@@ -23,16 +31,19 @@ public class UploadFilesActivity extends BasicActivity implements
 
 	@Inject
 	public UploadFilesActivity(UploadFilesView view,
-			PlaceController placeController) {
-		super(view.getHasMenus(), placeController);
+			PlaceController placeController, DispatchAsync dispatchAsync) {
+		super(view.getHasMenus(), placeController, dispatchAsync);
 		this.view = view;
 
-		bindUploader();
+		bind();
 	}
 
-	private void bindUploader() {
-		UploaderHandler handler = new UploaderHandler();
-		view.getUploader().addOnFinishUploadHandler(handler);
+	private void bind() {
+		UploaderHandler uploaderHandler = new UploaderHandler();
+		view.getUploader().addOnFinishUploadHandler(uploaderHandler);
+
+		ClickHandlerImpl clickHandler = new ClickHandlerImpl();
+		view.getBtnListFiles().addClickHandler(clickHandler);
 	}
 
 	/**
@@ -56,5 +67,37 @@ public class UploadFilesActivity extends BasicActivity implements
 			}
 		}
 
+	}
+
+	class ClickHandlerImpl implements ClickHandler {
+		@Override
+		public void onClick(ClickEvent event) {
+			if (event.getSource() == view.getBtnListFiles()) {
+				listUploads();
+			}
+		}
+
+	}
+
+	public void listUploads() {
+		ListUploadsAction action = new ListUploadsAction();
+		dispatchAsync.execute(action, new AsyncCallback<ListUploadsResult>() {
+
+			@Override
+			public void onFailure(Throwable caught) {
+				InforDialog dlg = new InforDialog();
+				dlg.setText("Error");
+				dlg.setMessage("failed. details=" + caught.getMessage());
+				dlg.center();
+			}
+
+			@Override
+			public void onSuccess(ListUploadsResult result) {
+				InforDialog dlg = new InforDialog();
+				dlg.setText("Success");
+				dlg.setMessage("ok=" + result.getAllItems().size());
+				dlg.center();
+			}
+		});
 	}
 }

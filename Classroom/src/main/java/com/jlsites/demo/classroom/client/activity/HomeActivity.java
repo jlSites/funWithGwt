@@ -1,5 +1,7 @@
 package com.jlsites.demo.classroom.client.activity;
 
+import net.customware.gwt.dispatch.client.DispatchAsync;
+
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
@@ -11,8 +13,9 @@ public class HomeActivity extends BasicActivity implements HomeView.Presenter {
 	private HomeView view;
 
 	@Inject
-	public HomeActivity(HomeView view, PlaceController placeController) {
-		super(view.getHasMenus(), placeController);
+	public HomeActivity(HomeView view, PlaceController placeController,
+			DispatchAsync dispatchAsync) {
+		super(view.getHasMenus(), placeController, dispatchAsync);
 		this.view = view;
 	}
 

@@ -26,9 +26,10 @@
 			</div>
 			<div>
 				This should have a data grid to list all files.
-				<p>TODO...</p>
 				<up:SingleUploader type="ANCHOR" autoSubmit="true"
 					avoidRepeatFiles="true" validExtensions="png, jpg" ui:field="uploader"></up:SingleUploader>
+
+				<g:Button ui:field="btnListFiles">List Files</g:Button>
 			</div>
 		</div>
 	</g:HTMLPanel>

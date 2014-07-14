@@ -1,5 +1,7 @@
 package com.jlsites.demo.classroom.client.activity;
 
+import net.customware.gwt.dispatch.client.DispatchAsync;
+
 import com.google.gwt.activity.shared.AbstractActivity;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -13,12 +15,15 @@ import com.jlsites.demo.classroom.client.place.UploadFilesPlace;
 import com.jlsites.demo.classroom.client.ui.HasMenus;
 
 public abstract class BasicActivity extends AbstractActivity {
-	private PlaceController placeController;
+	protected PlaceController placeController;
 	private HasMenus hasMenus;
+	protected DispatchAsync dispatchAsync;
 
-	public BasicActivity(HasMenus hasMenus, PlaceController placeController) {
+	public BasicActivity(HasMenus hasMenus, PlaceController placeController,
+			DispatchAsync dispatchAsync) {
 		this.hasMenus = hasMenus;
 		this.placeController = placeController;
+		this.dispatchAsync = dispatchAsync;
 
 		bindMenus();
 	}

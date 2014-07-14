@@ -22,6 +22,9 @@
 		<constructor-arg ref="ClassroomUserServiceImpl" />
 	</bean>
 
+	<bean id="listUploadsActionHandler"
+		class="com.jlsites.demo.classroom.server.handler.ListUploadsActionHandler"></bean>
+
 	<bean
 		class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
 

@@ -1,5 +1,7 @@
 package com.jlsites.demo.classroom.client.activity;
 
+import net.customware.gwt.dispatch.client.DispatchAsync;
+
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
@@ -12,8 +14,9 @@ public class HomeworkActivity extends BasicActivity implements
 	private HomeworkView view;
 
 	@Inject
-	public HomeworkActivity(HomeworkView view, PlaceController placeController) {
-		super(view.getHasMenus(), placeController);
+	public HomeworkActivity(HomeworkView view, PlaceController placeController,
+			DispatchAsync dispatchAsync) {
+		super(view.getHasMenus(), placeController, dispatchAsync);
 		this.view = view;
 	}
 
