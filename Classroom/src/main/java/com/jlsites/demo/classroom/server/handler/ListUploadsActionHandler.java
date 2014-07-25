@@ -36,7 +36,7 @@ public class ListUploadsActionHandler extends
 			throw new ActionException("CATALINA_BASE is not set properly");
 		}
 
-		File f = new File(catalinaBase + "/webapps/uploads/");
+		File f = new File(catalinaBase + IConstants.UPLOADS_FOLDER);
 		LOGGER.info("list all files from=" + f.getAbsolutePath());
 		for (String strName : f.list()) {
 			UploadItem item = new UploadItem();
