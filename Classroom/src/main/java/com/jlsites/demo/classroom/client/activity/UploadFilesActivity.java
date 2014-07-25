@@ -64,6 +64,8 @@ public class UploadFilesActivity extends BasicActivity implements
 				logger.log(Level.INFO, "fileName=" + serverInfo.getFileName());
 				logger.log(Level.INFO, "size=" + serverInfo.getSize());
 				logger.log(Level.INFO, "ctype=" + serverInfo.getCtype());
+				logger.log(Level.INFO,
+						"servlet path=" + uploader.getServletPath());
 			}
 		}
 
@@ -85,16 +87,14 @@ public class UploadFilesActivity extends BasicActivity implements
 
 			@Override
 			public void onFailure(Throwable caught) {
-				InforDialog dlg = new InforDialog();
-				dlg.setText("Error");
+				InforDialog dlg = new InforDialog("Error");
 				dlg.setMessage("failed. details=" + caught.getMessage());
 				dlg.center();
 			}
 
 			@Override
 			public void onSuccess(ListUploadsResult result) {
-				InforDialog dlg = new InforDialog();
-				dlg.setText("Success");
+				InforDialog dlg = new InforDialog("Success");
 				dlg.setMessage("ok=" + result.getAllItems().size());
 				dlg.center();
 			}

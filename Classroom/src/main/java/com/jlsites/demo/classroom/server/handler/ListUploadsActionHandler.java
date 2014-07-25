@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import com.jlsites.demo.classroom.shared.action.ListUploadsAction;
 import com.jlsites.demo.classroom.shared.action.ListUploadsResult;
 import com.jlsites.demo.classroom.shared.uploads.UploadItem;
+import com.jlsites.demo.core.shared.IConstants;
 
 public class ListUploadsActionHandler extends
 		SimpleActionHandler<ListUploadsAction, ListUploadsResult> {
@@ -29,12 +30,14 @@ public class ListUploadsActionHandler extends
 
 		// get all uploads
 		ListUploadsResult rlt = new ListUploadsResult();
-		String catalinaBase = System.getProperty("CATALINA_BASE");
+		String catalinaBase = System.getenv(IConstants.ENV_CATALINA_BASE);
 		if (catalinaBase == null || catalinaBase.trim().length() == 0) {
+			LOGGER.error("{} is not set properly", IConstants.ENV_CATALINA_BASE);
 			throw new ActionException("CATALINA_BASE is not set properly");
 		}
 
-		File f = new File(catalinaBase + "/uploads");
+		File f = new File(catalinaBase + "/webapps/uploads/");
+		LOGGER.info("list all files from=" + f.getAbsolutePath());
 		for (String strName : f.list()) {
 			UploadItem item = new UploadItem();
 			item.setFilename(strName);

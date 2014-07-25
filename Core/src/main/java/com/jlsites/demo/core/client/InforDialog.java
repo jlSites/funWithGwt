@@ -26,12 +26,13 @@ public class InforDialog extends DialogBox {
 	@UiField
 	DivElement textDiv;
 
-	public InforDialog() {
+	public InforDialog(String title) {
 		setWidget(binder.createAndBindUi(this));
 
 		setAnimationEnabled(true);
 		setGlassEnabled(true);
 
+		setText(title);
 		setModal(true);
 	}
 

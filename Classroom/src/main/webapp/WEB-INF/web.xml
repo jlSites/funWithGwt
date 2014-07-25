@@ -43,7 +43,10 @@
 	<servlet>
 		<servlet-name>uploadServlet</servlet-name>
 		<!-- This is the default servlet, it puts files in session -->
-		<servlet-class>gwtupload.server.UploadServlet</servlet-class>
+		<!-- <servlet-class>gwtupload.server.UploadServlet</servlet-class> -->
+		
+		<!-- This servlet will save the uploaded files into a public folder -->
+		<servlet-class>com.jlsites.demo.core.server.upload.UploadsServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>uploadServlet</servlet-name>
