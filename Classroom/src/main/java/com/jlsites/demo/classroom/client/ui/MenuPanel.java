@@ -10,6 +10,7 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
+import com.google.gwt.user.client.ui.HasText;
 import com.google.gwt.user.client.ui.Image;
 
 public class MenuPanel extends Composite implements HasMenus {
@@ -52,6 +53,8 @@ public class MenuPanel extends Composite implements HasMenus {
 
 	public MenuPanel() {
 		initWidget(uiBinder.createAndBindUi(this));
+
+		updateTeacherPhoto.getFileInput().setText("Change Photo...");
 	}
 
 	@Override
@@ -61,7 +64,7 @@ public class MenuPanel extends Composite implements HasMenus {
 
 	@Override
 	public void updateTeacher(String updatedImageName) {
-		// TODO is it safe?
+		// FIXME is it safe?
 		teacherImage.setUrl("/uploads/" + updatedImageName);
 	}
 
