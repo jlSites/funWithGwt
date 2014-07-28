@@ -1,5 +1,8 @@
 package com.jlsites.demo.classroom.client.ui;
 
+import gwtupload.client.IUploader;
+import gwtupload.client.SingleUploader;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.HasClickHandlers;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -7,6 +10,7 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
+import com.google.gwt.user.client.ui.Image;
 
 public class MenuPanel extends Composite implements HasMenus {
 
@@ -41,8 +45,24 @@ public class MenuPanel extends Composite implements HasMenus {
 	@UiField
 	Anchor uploadFilesAnchor;
 
+	@UiField
+	SingleUploader updateTeacherPhoto;
+	@UiField
+	Image teacherImage;
+
 	public MenuPanel() {
 		initWidget(uiBinder.createAndBindUi(this));
+	}
+
+	@Override
+	public IUploader getUpdateTeacherPhoto() {
+		return updateTeacherPhoto;
+	}
+
+	@Override
+	public void updateTeacher(String updatedImageName) {
+		// TODO is it safe?
+		teacherImage.setUrl("/uploads/" + updatedImageName);
 	}
 
 	@Override
