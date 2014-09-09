@@ -6,6 +6,7 @@
   <artifactId>root</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+  <name>com.jlsites.demo.Root</name>
   
   <modules>
     <module>Core</module>
