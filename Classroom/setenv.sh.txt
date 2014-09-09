@@ -1,0 +1,5 @@
+# move this file into tomcat_install/bin
+
+export JAVA_HOME=/opt/jdk1.7.0_25
+export JAVA_OPTS="-Djava.awt.headless=true -server -Xms193m -Xmx193m -XX:MaxPermSize=128M"
+export CATALINA_BASE=/opt/apache-tomcat-7.0.55
