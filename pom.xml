@@ -3,13 +3,13 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jlsites.demo</groupId>
-  <artifactId>build-pom</artifactId>
+  <artifactId>root</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   
- <modules>
-        <module>Core</module>
-        <module>Classroom</module>
-    </modules>
+  <modules>
+    <module>Core</module>
+    <module>Classroom</module>
+  </modules>
   
 </project>
